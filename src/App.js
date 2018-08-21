@@ -1,10 +1,13 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 
-import store from 'redux/store';
+import configureStore from 'redux/store/configureStore';
 import { Pokemons } from 'containers';
 
 import './styles/base.scss';
+
+const preloadedState = { };
+const store = configureStore(preloadedState);
 
 const App = () => (
   <Provider store={store}>
