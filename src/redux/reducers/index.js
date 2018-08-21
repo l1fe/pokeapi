@@ -1,3 +1,5 @@
+import api from './api';
+
 export default {
-  customReducer: (state = null) => state,
+  api,
 };
