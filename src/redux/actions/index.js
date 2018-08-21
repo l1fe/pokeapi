@@ -1,1 +1,1 @@
-export * as apiActions from './api';
+export * as api from './api';
