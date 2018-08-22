@@ -7,10 +7,9 @@ import { api } from '../types';
 function* fetchPokemons(action) {
   try {
     const resp = yield call(apiClient.fetchPokemons);
-    const items = resp.data.results;
     yield put({
       type: api.fetchPokemons.success,
-      payload: items,
+      response: resp.data,
     });
   } catch (e) {
     yield put({
